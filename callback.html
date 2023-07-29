@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GitHub Callback</title>
+    <title>Xero Authentication Callback</title>
 </head>
 <body>
-    <h1>GitHub Authentication Callback</h1>
+    <h1>Xero Authentication Callback</h1>
     <p>Extracting the authorization code from the URL...</p>
 
     <script>
@@ -23,10 +23,9 @@
         var authorizationCode = getParameterByName('code');
 
         // Send the authorization code back to your Python script
-        // You can use AJAX or any other method to make a POST request
-        // to your Python script with the authorization code.
-        // Here's a simple example using fetch API:
-        fetch('http://localhost:8001/receive-auth-code', {
+        // Replace 'http://localhost:8001/receive-auth-code' with the actual URL
+        // where your Python script is running and expects to receive the authorization code.
+        fetch('https://www.pythonanywhere.com/user/tomnewman/files/home/tomnewman/testing.py', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
