@@ -22,10 +22,8 @@
         // Get the authorization code from the URL query parameters
         var authorizationCode = getParameterByName('code');
 
-        // Send the authorization code back to your Python script
-        // Replace 'http://localhost:8001/receive-auth-code' with the actual URL
-        // where your Python script is running and expects to receive the authorization code.
-        fetch('https://www.pythonanywhere.com/user/tomnewman/files/home/tomnewman/testing.py', {
+        // Send the authorization code to your custom PythonAnywhere endpoint
+        fetch('https://www.pythonanywhere.com/user/tomnewman/endpoint/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
